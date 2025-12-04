@@ -1,0 +1,48 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedHashSet;
+
+public class setIntro2 {
+
+	public static void main(String[] args) {
+		LinkedHashSet<Integer> set = new LinkedHashSet<Integer>();
+		set.add(100);
+		set.add(200);
+		set.add(300);
+		set.add(400);
+		set.add(500);
+		set.addFirst(400);
+		set.addLast(400);
+		set.add(20);
+		ArrayList<Integer> a= new ArrayList<Integer>(set);
+		Collections.sort(a);
+		set.clear();
+		set.addAll(a);
+		System.out.println(set);
+		
+		set.removeIf(t -> t%2==0);
+		System.out.println(set);
+		
+		set.forEach(t -> System.out.println(t));
+		
+//		System.out.println(set.removeFirst());
+//		System.out.println(set.getFirst());
+//		System.out.println(set.removeLast());
+//		System.out.println(set.getLast());
+//		set.add(700);
+//		set.add(800);
+//		System.out.println(set.addAll(Arrays.asList(22,22,22)));
+//		System.out.println(set);
+//		System.out.println(set.contains(22));
+//		System.out.println(set.containsAll(Arrays.asList(100,1,700)));
+//		System.out.println(set.isEmpty());
+//		System.out.println(set.remove(100));
+//		System.out.println(set);
+//		System.out.println(set.removeAll(Arrays.asList(100,1,700)));
+//		System.out.println(set.getClass());
+//		System.out.println(set.reversed());
+
+	}
+
+}
